@@ -9,7 +9,7 @@ var essay = {
     title: "Technology Article",
     heading: "What Really is the Impact of Technology on Teens?",
     date: `August 3rd, 2017
-            --By Urja Khimania`,
+           <br/> --By Urja Khimania`,
     content: "heeeeeeeeeeeeeeeeeeuuuuuuyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy",
 };
 
