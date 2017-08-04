@@ -22,15 +22,26 @@
         <script>
             console.log('Loaded!');
             var right = document.getElementById("right");
+            var left = document.getElementById("left");
+            var up = document.getElementById("up");
+            var down = document.getElementById("down");
             var icon = document.getElementById("icon");
             var marginLeft = 0;
             function moveRight () {
-                marginLeft = marginLeft + 10;
+                marginLeft = marginLeft + 50;
+                icon.style.marginLeft = marginLeft+"px";
+            }
+            function moveLeft () {
+                marginLeft = marginLeft - 50;
                 icon.style.marginLeft = marginLeft+"px";
             }
             right.onclick = function(){
             var icon = document.getElementById("icon");
-            var interval = setInterval(moveRight, 1000);
+            var interval = setInterval(moveRight, 100);
+            };
+            left.onclick = function(){
+            var icon = document.getElementById("icon");
+            var interval = setInterval(moveLeft, 100);
             };
         </script>
     </body>
