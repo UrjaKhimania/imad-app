@@ -21,12 +21,15 @@
         </div>
         <script>
             console.log('Loaded!');
-            var up = document.getElementById("up");
+            var up = document.getElementById("right");
             var icon = document.getElementById("icon");
+            moveRight{
+                marginLeft = marginLeft + 10;
+                icon.style.marginLeft = marginLeft+"px";
+            }
             up.onclick = function(){
             var icon = document.getElementById("icon");
             var interval = setInterval(moveRight, 100);
-            icon.style.marginLeft = "100px";
             };
         </script>
     </body>
