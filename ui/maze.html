@@ -27,6 +27,7 @@
             var down = document.getElementById("down");
             var icon = document.getElementById("icon");
             var marginLeft = 0;
+            var marginUp = 0;
             function moveRight () {
                 marginLeft = marginLeft + 20;
                 icon.style.marginLeft = marginLeft+"px";
@@ -34,6 +35,14 @@
             function moveLeft () {
                 marginLeft = marginLeft - 20;
                 icon.style.marginLeft = marginLeft+"px";
+            }
+            function moveDown () {
+                marginUp = marginup + 20;
+                icon.style.marginTop = marginUp+"px";
+            }
+            function moveUp () {
+                marginUp = marginUp - 20;
+                icon.style.marginTop = marginUp+"px";
             }
             right.onclick = function(){
             var icon = document.getElementById("icon");
