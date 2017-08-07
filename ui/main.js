@@ -1,8 +1,7 @@
-console.log('Loaded!');
-var up = document.getElementById("up");
-var icon = document.getElementById("icon");
-up.onclick = function(){
-    var icon = document.getElementById("icon");
-    var interval = setInterval(moveRight, 100);
-    icon.style.marginLeft = "100px";
+var button = document.getElementById("like");
+var counter = 0;
+button.onclick = function(){
+    counter = counter + 1;
+    var span = document.getElementById("span");
+    span.innerHTML = counter.toString();
 };
