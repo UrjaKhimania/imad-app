@@ -5,6 +5,9 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+app.get('/flappy', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'flappy.html'));
+});
 app.get('/maze', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'maze.html'));
 });
