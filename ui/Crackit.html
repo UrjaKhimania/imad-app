@@ -20,7 +20,13 @@
         <script>
             var ready = document.getElementById("ready");
             ready.onclick = function(){
-            prompt("Type your answer here!");
+            var answer = prompt("Type your answer here!");
+            if(answer.indexOf('knock') > -1){
+             confirm("CORRECT!")   
+            }
+            else{
+                confirm("INCORRECT ANSWER! PLEASE TRY AGAIN!")
+            }
             };
         </script>
     </body>
