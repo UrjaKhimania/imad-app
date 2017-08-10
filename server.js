@@ -11,6 +11,11 @@ app.get('/flappy', function (req, res) {
 app.get('/maze', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'maze.html'));
 });
+
+app.get('/crackit', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'Crackit.html'));
+});
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
