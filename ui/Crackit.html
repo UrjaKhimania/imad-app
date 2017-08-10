@@ -21,7 +21,7 @@
             var ready = document.getElementById("ready");
             ready.onclick = function(){
             var answer = prompt("Type your answer here!");
-            if(answer.indexOf(' knock ',' knocked ') > -1){
+            if(answer.indexOf(' knock '||' knocked ') > -1){
              confirm("CORRECT!")   
             }
             else{
