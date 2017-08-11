@@ -109,18 +109,7 @@
             <br/>
             <button id="btn_iq">My IQ</button>
             <script>
-            var typ;
-            if (iq<=0){
-              typ = "poor";  
-            } else if (iq===1){
-                typ = "below average"
-              } else if (iq===2){
-                  typ = "average"
-                } else if (iq===3){
-                    typ = "above average"
-                  } else {
-                      typ = "genius!"
-                    }
+
                 var btn_iq = document.getElementById("btn_iq");
                 btn_iq.onclick = function(){
                     confirm("Your IQ is "+typ);+
