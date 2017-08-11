@@ -19,7 +19,7 @@
             </div>
             <button id="ready">I am Ready!</button> <button id="answer">I give up!</button>
             <script>
-                var iq = 0+"poor";
+                var iq = 0;
                 var ready = document.getElementById("ready");
                 ready.onclick = function(){
                 var answer = prompt("Type your answer here!");
@@ -110,10 +110,17 @@
             <button id="btn_iq">My IQ</button>
             <script>
             var typ;
-            
+            switch (""+iq){
+                
+                case "1": typ = "below average"; break;
+                case "2": typ = "average"; break;
+                case "3": typ = "above average"; break;
+                case "4": typ = "genius!"; break;
+            }
+
                 var btn_iq = document.getElementById("btn_iq");
                 btn_iq.onclick = function(){
-                    confirm("Your IQ is "+iq);
+                    confirm("Your IQ is "+typ);
                 }
             </script>
         </div>
