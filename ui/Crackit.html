@@ -121,7 +121,14 @@
 
                 var btn_iq = document.getElementById("btn_iq");
                 btn_iq.onclick = function(){
-                    confirm("Your IQ is "+typ);
+                    confirm("keep this number in mind! Memorize it well before clicking Ok.");
+                    confirm(
+                    `Here's the scale:
+                    0 or less: You have a poor IQ.
+                    1: Your IQ is below average.
+                    2: Your IQ is normal or average.
+                    3: Your IQ ia above average.
+                    4: You are a genius!`);
                 }
             </script>
         </div>
