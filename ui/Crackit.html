@@ -110,14 +110,16 @@
             <button id="btn_iq">My IQ</button>
             <script>
             var typ;
-            if (iq==1){
-                typ = "below average"
+            if (iq<=0){
+              typ = "poor";  
+            } if (iq==1){
+                typ = "below average";
               } if (iq==2){
-                  typ = "average"
+                  typ = "average";
                 } if (iq==3){
-                    typ = "above average"
+                    typ = "above average";
                   } if (iq>=4){
-                      typ = "genius!"
+                      typ = "genius!";
                     }
                 var btn_iq = document.getElementById("btn_iq");
                 btn_iq.onclick = function(){
