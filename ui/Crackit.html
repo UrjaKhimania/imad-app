@@ -19,11 +19,13 @@
             </div>
             <button id="ready">I am Ready!</button> <button id="answer">I give up!</button>
             <script>
+                var iq = 0;
                 var ready = document.getElementById("ready");
                 ready.onclick = function(){
                 var answer = prompt("Type your answer here!");
                 if(answer.indexOf('knock') > -1){
-                 confirm("CORRECT!")   
+                 confirm("CORRECT!")
+                 iq = iq + 1;
                 }
                 else{
                     confirm("INCORRECT ANSWER! PLEASE TRY AGAIN!")
@@ -31,7 +33,8 @@
                 };
                 var answer = document.getElementById("answer");
                 answer.onclick = function(){
-                 confirm("Why would a person knock on the door of his own room? Wouldn't he try to open it with the key that he had?");   
+                 confirm("Why would a person knock on the door of his own room? Wouldn't he try to open it with the key that he had?");
+                 iq = iq - 1;
                 }
             </script>
             <br/>
@@ -98,6 +101,13 @@
                 }
             </script>
             <br/>
+            <button id="btn_iq">My IQ</button>
+            <script>
+                var btn_iq = document.getElementById("btn_iq");
+                btn_iq.onclick = function(){
+                    confirm("Your IQ is "+iq);
+                }
+            </script>
         </div>
     </body>
 </html>
