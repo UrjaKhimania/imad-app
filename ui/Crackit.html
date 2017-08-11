@@ -47,7 +47,8 @@
                 ready.onclick = function(){
                 var answer = prompt("Type your answer here!");
                 if(answer.indexOf('heroine') > -1){
-                 confirm("CORRECT!")   
+                 confirm("CORRECT!")
+                 iq = iq + 1;
                 }
                 else{
                     confirm("INCORRECT ANSWER! PLEASE TRY AGAIN!")
@@ -56,6 +57,7 @@
                 var answer2 = document.getElementById("answer2");
                 answer2.onclick = function(){
                     confirm("heroine");
+                    iq = iq - 1;
                 }
             </script>
             <br/>
@@ -68,7 +70,8 @@
                 ready.onclick = function(){
                 var answer = prompt("Type your answer here!");
                 if(answer.indexOf('hole') > -1){
-                 confirm("CORRECT!")   
+                 confirm("CORRECT!")
+                 iq = iq + 1;
                 }
                 else{
                     confirm("INCORRECT ANSWER! PLEASE TRY AGAIN!")
@@ -77,6 +80,7 @@
                 var answer3 = document.getElementById("answer3");
                 answer3.onclick = function(){
                     confirm("hole");
+                    iq = iq - 1;
                 }
             </script>
             <br/>
@@ -89,7 +93,8 @@
                 ready.onclick = function(){
                 var answer = prompt("Type your answer here!");
                 if(answer.indexOf('chef') > -1){
-                 confirm("CORRECT!")   
+                 confirm("CORRECT!")
+                 iq = iq + 1;
                 }
                 else{
                     confirm("INCORRECT ANSWER! PLEASE TRY AGAIN!")
@@ -98,14 +103,27 @@
                 var answer4 = document.getElementById("answer4");
                 answer4.onclick = function(){
                     confirm("chef");
+                    iq = iq - 1;
                 }
             </script>
             <br/>
             <button id="btn_iq">My IQ</button>
             <script>
+            var typ;
+            if (iq<=0){
+              typ = "poor";  
+            } else if (iq===1){
+                typ = "below average"
+              } else if (iq===2){
+                  typ = "average"
+                } else if (iq===3){
+                    typ = "above average"
+                  } else {
+                      typ = "genius!"
+                    }
                 var btn_iq = document.getElementById("btn_iq");
                 btn_iq.onclick = function(){
-                    confirm("Your IQ is "+iq);
+                    confirm("Your IQ is "+typ);+
                 }
             </script>
         </div>
