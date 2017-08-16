@@ -7,9 +7,11 @@ var app = express();
 app.use(morgan('combined'));
 app.use(bodyParser.json());
 
-app.post('/login', function (req, res) {
+app.get('/login', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'login.html'));
-  var username = req.body.username;
+});
+app.post('/create-user', function (req, res) {
+    var username = req.body.username;
   var password = req.body.password;
   var salt = crypto.randomBytes(128).toString("hex");
   var dbString = hash(password, salt);
@@ -19,7 +21,7 @@ app.post('/login', function (req, res) {
      } else{
          res.send('Account successfully created '+username);
      }
-  });
+    });
 });
 
 app.get('/flappy', function (req, res) {
