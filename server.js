@@ -18,8 +18,14 @@ app.get('/login', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'login.html'));
 });
 
-var username = 
-
+var pool = new pool(config);
+var user = document.getElementById("user").value;
+var pass = document.getElementById("pass").value;
+var create_user = document.getElementById("cu");
+var login = document.getElementById("login");
+create_user.onclick = function(){
+  pool.query('INSERT INTO "Login" (username, password) VALUES($1, $2)', [user, pass], function(err, result){alert ("error! User not created!")});  
+};
 
 app.get('/flappy', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'flappy.html'));
