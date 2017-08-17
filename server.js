@@ -18,7 +18,7 @@ app.get('/login', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'login.html'));
 });
 
-var pool = new pool(config);
+
 var user = document.getElementById("user").value;
 var pass = document.getElementById("pass").value;
 var create_user = document.getElementById("cu");
