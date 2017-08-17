@@ -2,13 +2,6 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 var bodyParser = require('body-parser');
-var config = {
-    user: 'urjakhimania200334',
-    database: 'urjakhimania200334',
-    host: 'db.imad.hasura-app.io',
-    port: '5432',
-    password: 'process.env.DB_PASSWORD',
-};
 
 var app = express();
 app.use(morgan('combined'));
@@ -17,15 +10,6 @@ app.use(bodyParser.json());
 app.get('/login', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'login.html'));
 });
-
-var pool = new pool(config);
-var user = document.getElementById("user").value;
-var pass = document.getElementById("pass").value;
-var create_user = document.getElementById("cu");
-var login = document.getElementById("login");
-create_user.onclick = function(){
-  pool.query('INSERT INTO "Login" (username, password) VALUES($1, $2)', [user, pass], function(err, result){alert ("error! User not created!")});  
-};
 
 app.get('/flappy', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'flappy.html'));
