@@ -22,5 +22,23 @@
         <input type="password" id="pass">
         <br>
         <button id="cu">Create User</button>   <button id="login">Login</button>
+        <script>
+            var config = {
+                    user: 'urjakhimania200334',
+                    database: 'urjakhimania200334',
+                    host: 'db.imad.hasura-app.io',
+                    port: '5432',
+                    password: 'process.env.DB_PASSWORD',
+            };
+        
+            var pool = new pool(config);
+            var user = document.getElementById("user").value;
+            var pass = document.getElementById("pass").value;
+            var create_user = document.getElementById("cu");
+            var login = document.getElementById("login");
+            create_user.onclick = function(){
+              pool.query('INSERT INTO "Login" (username, password) VALUES($1, $2)', [user, pass], function(err, result){alert ("error! User not created!")});  
+            };
+        </script>
     </body>
 </html>
