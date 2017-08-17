@@ -18,6 +18,9 @@ app.get('/login', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'login.html'));
 });
 
+var username = 
+
+
 app.get('/flappy', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'flappy.html'));
 });
