@@ -34,9 +34,11 @@
         <button id="submit">Submit</button>
         <script>
             var create_user = document.getElementById('cu');
-            var username = document.getElementById('user').value;
+            
             var submit = document.getElementById('submit');
             create_user.onclick = function(){
+                var username = document.getElementById('user').value;
+                confirm("hello "+username);
                 var name = prompt("Plese enter your name below!");
             }
             submit.onclick = function(){
