@@ -6,15 +6,6 @@ var bodyParser = require('body-parser');
 var app = express();
 app.use(morgan('combined'));
 app.use(bodyParser.json());
-var config = {
-    user: 'urjakhimania200334',
-    database: 'urjakhimania200334',
-    host: 'db.imad.hasura-app.io',
-    port: '5432',
-    password: 'process.env.DB_PASSWORD'
-};
-        
-var pool = new pool(config);
 
 app.get('/login', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'login.html'));
