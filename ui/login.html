@@ -21,7 +21,7 @@
         <h3>If you have an account already, please log in. Otherwise, click on create user to give comments and likes...</h3>
         <br/>
         <input type="text" name="user" id="user" placeholder="Username"/>
-        <input type="text" name="pass" placeholder="Password"/>
+        <input type="password" name="pass" placeholder="Password"/>
         <br/>
         <br/>
         <button id="cu">Create User</button>        <button id="login">Login</button>
@@ -39,11 +39,26 @@
             create_user.onclick = function(){
                 var username = document.getElementById('user').value;
                 confirm("hello "+username);
-                
             }
             submit.onclick = function(){
                 var comment = document.getElementById("comment_text").value;
                 console.log("This is the comment: "+comment);
+                
+                var content = '';
+                var commentsData = JSON.parse(this.responseText);
+                for (var i=0; i< commentsData.length; i++) {
+                    var time = new Date(commentsData[i].timestamp);
+                    content += `<div class="comment">
+                        <p>${escapeHTML(commentsData[i].comment)}</p>
+                        <div class="commenter">
+                            ${commentsData[i].username} - ${time.toLocaleTimeString()} on ${time.toLocaleDateString()} 
+                        </div>
+                    </div>`;
+                }
+                comments.innerHTML = content;
+            } else {
+                comments.innerHTML('Oops! Could not load comments!');
+            }
             }
         </script>
     </body>
