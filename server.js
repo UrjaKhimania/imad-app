@@ -1,11 +1,27 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
-
+var Pool = require('pg').Pool;
 
 var app = express();
 app.use(morgan('combined'));
 
+        var config = {
+            user: 'urjakhimania200334',
+            database: 'urjakhimania200334',
+            host: 'db.imad.hasura-app.io',
+            port: '5432',
+            password: 'db-urjakhimania200334-33937'
+        };
+            var pool = new Pool(config);
+
+            var user = document.getElementsByName("user").value;
+            var pass = document.getElementsByName("pass").value;
+            var create_user = document.getElementById("cu");
+            var login = document.getElementById("login");
+            create_user.onclick = function(){
+                pool.query('INSERT INTO "Login" (username, password) VALUES($1, $2)', [user, pass], function(err, result){alert ("error! User not created!")});
+            };
 
 app.get('/login', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'login.html'));
