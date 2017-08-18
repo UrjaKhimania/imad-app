@@ -18,17 +18,27 @@
         <br/>
         </div>
         <br>
+        <h3>If you have an account already, please log in. Otherwise, click on create user to give comments and likes...</h3>
+        <br/>
         <input type="text" name="user" id="user"/>
         <input type="text" name="pass" />
-        <br>
-        <button id="cu">Create User</button>   <button id="login">Login</button>
+        <br/>
+        <button id="cu">Create User</button>        <button id="login">Login</button>
         <script>
             var create_user = document.getElementById('cu');
             var username = document.getElementById('user').value;
             create_user.onclick = function(){
-                console.log("hi "+username);
-                confirm("Welcome "+username);
+                var name = prompt("Plese enter your name below!");
             }
+            function loadCommentForm () {
+    var commentFormHtml = `
+        <h5>Submit a comment</h5>
+        <textarea id="comment_text" rows="5" cols="100" placeholder="Enter your comment here..."></textarea>
+        <br/>
+        <input type="submit" id="submit" value="Submit" />
+        <br/>
+        `;
+    document.getElementById('comment_form').innerHTML = commentFormHtml;
         </script>
     </body>
 </html>
