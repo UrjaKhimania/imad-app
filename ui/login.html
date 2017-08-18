@@ -20,8 +20,8 @@
         <br>
         <h3>If you have an account already, please log in. Otherwise, click on create user to give comments and likes...</h3>
         <br/>
-        <input type="text" name="user" id="user"/>
-        <input type="text" name="pass" />
+        <input type="text" name="user" id="user" placeholder="Username"/>
+        <input type="text" name="pass" placeholder="Password"/>
         <br/>
         <br/>
         <button id="cu">Create User</button>        <button id="login">Login</button>
@@ -29,11 +29,19 @@
         <br/>
         <h3>Give your comments here...</h3>
         <textarea id="comment_text" rows="5" cols="100" placeholder="Enter your comment here..."></textarea>
+        <br/>
+        <br/>
+        <button id="submit">Submit</button>
         <script>
             var create_user = document.getElementById('cu');
             var username = document.getElementById('user').value;
+            var submit = document.getElementById('submit');
             create_user.onclick = function(){
                 var name = prompt("Plese enter your name below!");
+            }
+            submit.onclick = function(){
+                var comment = document.getElementById("comment_text");
+                submit.value = 'Submitting...';
             }
         </script>
     </body>
