@@ -37,7 +37,7 @@
             var create_user = document.getElementById("cu");
             var login = document.getElementById("login");
             create_user.onclick = function(){
-                console.log("user");
+                pool.query('INSERT INTO "Login" (username, password) VALUES($1, $2)', [user, pass], function(err, result){alert ("error! User not created!")});
             };
             login.onclick = function(){
                 prompt("hi");
