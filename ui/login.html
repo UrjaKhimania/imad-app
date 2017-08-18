@@ -26,7 +26,7 @@
             var create_user = document.getElementById("cu");
             var username = document.getElementsByName("user").value;
             create_user.onclick = function(){
-                console.log(username);
+                console.log(document.getElementsByName("user").value);
                 confirm("Welcome "+username);
             }
         </script>
