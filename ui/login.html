@@ -23,15 +23,7 @@
         <br>
         <button id="cu">Create User</button>   <button id="login">Login</button>
         <script>
-            var config = {
-                    user: 'urjakhimania200334',
-                    database: 'urjakhimania200334',
-                    host: 'db.imad.hasura-app.io',
-                    port: '5432',
-                    password: 'process.env.DB_PASSWORD',
-            };
-        
-            var pool = new pool(config);
+
             var user = document.getElementsByName("user").value;
             var pass = document.getElementsByName("pass").value;
             var create_user = document.getElementById("cu");
