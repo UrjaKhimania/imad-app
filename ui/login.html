@@ -18,15 +18,15 @@
         <br/>
         </div>
         <br>
-        <input type="text" name="user" />
+        <input type="text" name="user" id="user"/>
         <input type="text" name="pass" />
         <br>
         <button id="cu">Create User</button>   <button id="login">Login</button>
         <script>
             var create_user = document.getElementById('cu');
-            var username = document.getElementsByName('user').value;
+            var username = document.getElementById('user').value;
             create_user.onclick = function(){
-                console.log(username.substring(0,3));
+                console.log(username);
                 confirm("Welcome "+username);
             }
         </script>
