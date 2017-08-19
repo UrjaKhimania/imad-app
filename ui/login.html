@@ -27,17 +27,19 @@
         <button id="cu">Create User</button>        <button id="login">Login</button>
         <br/>
         <br/>
-        <h3>Give your comments here...</h3>
-        <textarea id="comment_text" rows="5" cols="100" placeholder="Enter your comment here..."></textarea>
-        <br/>
-        <br/>
-        <button id="submit">Submit</button>
-        <hr/>
-        
+        <div class="txt_area" display:none>
+            <h3>Give your comments here...</h3>
+            <textarea id="comment_text" rows="5" cols="100" placeholder="Enter your comment here..."></textarea>
+            <br/>
+            <br/>
+            <button id="submit">Submit</button>
+            <hr/>
+        </div>
         <script>
             var create_user = document.getElementById('cu');
-            
+            var login = document.getElementById("login");
             var submit = document.getElementById('submit');
+            var cmt_bx = document.getElementById("txt_area");
             create_user.onclick = function(){
                 var username = document.getElementById('user').value;
                 confirm("hello "+username);
