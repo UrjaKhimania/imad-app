@@ -27,7 +27,7 @@
         <button id="cu">Create User</button>        <button id="login">Login</button>
         <br/>
         <br/>
-        <div class="txt_area" style="visibility:hidden">
+        <div class="txt_area">
             <h3>Give your comments here...</h3>
             <textarea id="comment_text" rows="5" cols="100" placeholder="Enter your comment here..."></textarea>
             <br/>
@@ -44,7 +44,7 @@
                 var cmt_bx = document.getElementById("txt_area");
                 var username = document.getElementById('user').value;
                 confirm("hello "+username);
-                cmt_bx.style.visibility = "visible";
+                cmt_bx.style.visibility = "hidden";
             }
             submit.onclick = function(){
                 var comment = document.getElementById("comment_text").value;
