@@ -40,13 +40,11 @@
             var login = document.getElementById("login");
             var submit = document.getElementById('submit');
             var cmt_bx = document.getElementById("txt_area");
-            function visible = new function(){
-                cmt_bx.visible = true;
-            }
+           
             create_user.onclick = function(visible){
                 var username = document.getElementById('user').value;
                 confirm("hello "+username);
-                cmt_bx.style.visibility="visible";
+                cmt_bx.visible = true;
             }
             submit.onclick = function(){
                 var comment = document.getElementById("comment_text").value;
