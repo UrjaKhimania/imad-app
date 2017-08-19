@@ -53,8 +53,7 @@
                 var comment = document.getElementById("comment_text").value;
                 console.log("This is the comment: "+comment);
                 var div = document.getElementById("print");
-                var content = document.createTextNode(comment);
-                div.appendChild(content);
+                div.innerHTML += comment;
             }
         </script>
     </body>
